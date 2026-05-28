@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. DESKTOP VERSION (Your Original Styles Kept Exactly The Same)
+   ========================================================================== */
 .container {
   width: 70%;
   margin: auto;
@@ -7,7 +10,6 @@
 .dice {
   text-align: center;
   display: inline-block;
-
 }
 
 body {
@@ -20,7 +22,7 @@ h1 {
   text-shadow: 5px 0 #232931;
   font-size: 8rem;
   color: #4ECCA3;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 p {
@@ -38,5 +40,80 @@ footer {
   color: #EEEEEE;
   text-align: center;
   font-family: 'Indie Flower', cursive;
+}
 
+/* ==========================================================================
+   2. TABLET VERSION (Screens smaller than 1024px down to 769px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 5rem;
+  }
+  
+  .dice {
+    display: inline-block;
+    width: 45%;
+    margin: 0;
+  }
+  
+  img {
+    width: 75%;
+  }
+}
+
+/* ==========================================================================
+   3. MOBILE PHONE VERSION (Centering and Upsizing)
+   ========================================================================== */
+/* ==========================================================================
+   3. MOBILE PHONE VERSION (ULTRA SIZE & CENTERING)
+   ========================================================================== */
+@media (max-width: 768px) {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents any accidental side-scrolling */
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Keeps everything locked in the center vertically */
+    align-items: center;     /* Centers everything horizontally */
+  }
+
+  .container {
+    width: 95%; /* Maximizes space on the sides */
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 6.5rem; /* MASSIVE heading for mobile */
+    margin: 0 0 20px 0; /* Tightened the bottom margin to give the giant dice more room */
+    text-shadow: 6px 0 #232931;
+    line-height: 1.1;
+  }
+
+  p {
+    font-size: 3.5rem; /* Huge Player text */
+    margin: 0 0 10px 0;
+    font-weight: bold;
+  }
+
+  .dice {
+    display: block; 
+    width: 100%;    
+    margin-bottom: 35px; /* Pronounced space between the two stacked players */
+  }
+
+  img {
+    width: 85%; /* Giant dice graphics that scale beautifully on the phone screen */
+    max-width: 280px; /* High ceiling so it stays big on larger phones */
+    height: auto;
+  }
+
+  footer {
+    margin-top: 10px;
+    font-size: 1.5rem; /* Made the footer easily visible too */
+  }
 }
